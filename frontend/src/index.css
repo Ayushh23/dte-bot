@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #0B0E14; /* Deep, sophisticated dark slate */
+  --bg-panel: rgba(15, 23, 42, 0.6); /* Slate-900 glass with precision transparency */
+  --border-light: rgba(255, 255, 255, 0.08);
+  
+  /* Replacing harsh neon with professional SaaS tones */
+  --accent-cyan: #3b82f6; /* Trustworthy Blue-500 */
+  --accent-pink: #8b5cf6; /* Deep Violet-500 */
+  --accent-hover: #2563eb;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-inverse: #ffffff;
+  
+  --glass-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
+  --bg-bot: rgba(30, 41, 59, 0.7); /* Smooth Slate-800 for bot bubbles */
+  --bg-user: rgba(23, 37, 84, 0.6); /* Deep Blue-950 for user bubbles */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Complex mesh gradient to give that premium modern SaaS depth */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 50%);
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+}
+
+.neon-text {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Replacing harsh bloom with a clean drop shadow */
+  filter: drop-shadow(0px 2px 4px rgba(59, 130, 246, 0.2));
+}
+
+.premium-text {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
